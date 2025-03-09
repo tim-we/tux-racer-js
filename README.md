@@ -1,8 +1,8 @@
 # TuxRacer.JS
 
-![TuxRacer.JS Screenshot](screenshot.webp)
-
 You can play TuxRacer.JS directly in your browser here: [Play TuxRacer.JS](https://0x00eb.itch.io/tux-racer)
+
+![TuxRacer.JS Screenshot](screenshot.webp)
 
 TuxRacer.JS is a port and rewrite of *Extreme Tux Racer*, which itself is based on the original *Tux Racer* game. This project allows you to enjoy Tux Racer directly in your web browser, supporting all major desktop and mobile browsers.
 
