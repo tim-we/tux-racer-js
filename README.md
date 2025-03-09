@@ -45,6 +45,59 @@ TuxRacer.JS is a port and rewrite of *Extreme Tux Racer*, which itself is based 
 - **Braking** is useful for mastering tight turns.
 - **Terrain type** significantly impacts Tux's acceleration and handling.
 
+### Selecting a Course
+By default, the game starts on *Bunny Hill*, but you can switch to a different course using the `course` URL query parameter.
+
+To play a specific course, add `?course=course-name` to the URL. For example:
+```
+http://localhost:5173/?course=frozen-river
+```
+Below is a list of available courses and their corresponding parameters:
+
+| Course Name  | URL Parameter |
+| ------------ | ------------- |
+| Bunny Hill (default) | bunny-hill  |
+| Frozen River | frozen-river  |
+| Challenge One | challenge-one  |
+| Chinese Wall | chinese-wall  |
+| Downhill Fear | downhill-fear  |
+| Explore Mountains | explore-mountains  |
+| Frozen Lakes | frozen-lakes  |
+| Hippo Run | hippo-run  |
+| Holy Grail | holy-grail  |
+| In Search of Vodka | in-search-of-vodka  |
+| Milos Castle | milos-castle  |
+| Path of Daggers | path-of-daggers  |
+| Penguins Can't Fly | penguins-cant-fly  |
+| Quiet River | quiet-river  |
+| Secret Valleys | secret-valleys  |
+| This Means Something | this-means-something  |
+| Tux at Home | tux-at-home  |
+| Twisty Slope | twisty-slope  |
+| Wild Mountains | wild-mountains  |
+| Bumpy Ride | bumpy-ride  |
+
+### Changing the Environment
+The game also supports different environments, which can be selected using the `environment` URL query parameter.
+
+To change the environment, add `?environment=environment-name` to the URL. For example:
+```
+http://localhost:5173/?environment=night
+```
+Here are the available environments:
+
+| Environment | URL Parameter |
+| ----------- | ------------- |
+| Sunny (default) | sunny  |
+| Night | night  |
+| Cloudy | cloudy  |
+
+You can also combine parameters, for example:
+```
+http://localhost:5173/?course=downhill-fear&environment=night
+```
+This would start the game on *Downhill Fear* with a *Night* environment.
+
 ---
 
 ## Contributing
