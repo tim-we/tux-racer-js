@@ -1,10 +1,10 @@
 # TuxRacer.JS
 
-You can play TuxRacer.JS directly in your browser here: [Play TuxRacer.JS](https://0x00eb.itch.io/tux-racer)
+You can play Tux Racer directly in your browser here: [Play TuxRacer.JS](https://0x00eb.itch.io/tux-racer)
 
 ![TuxRacer.JS Screenshot](screenshot.webp)
 
-TuxRacer.JS is a port and rewrite of *Extreme Tux Racer*, which itself is based on the original *Tux Racer* game. This project allows you to enjoy Tux Racer directly in your web browser, supporting all major desktop and mobile browsers.
+TuxRacer.JS is a port / rewrite of *Extreme Tux Racer*, which itself is based on the original *Tux Racer* game. This project allows you to enjoy Tux Racer directly in your web browser, supporting all major desktop and mobile browsers.
 
 **Note:** This project is in an early development stage and far from complete. However, some courses are already functional enough to provide a fun experience (at least for me!).
 
@@ -41,9 +41,9 @@ TuxRacer.JS is a port and rewrite of *Extreme Tux Racer*, which itself is based 
 - **Mobile:** Control Tux using touch input via a virtual joystick.
 
 ### Tips
-- **Paddling forward** helps Tux gain initial speed but is unnecessary once he reaches high velocity.
+- **Paddling forward** helps Tux gain initial speed but is slowing down once he reaches high velocity.
 - **Braking** is useful for mastering tight turns.
-- **Terrain type** significantly impacts Tux's acceleration and handling.
+- **Terrain types** significantly impact Tux's acceleration and handling.
 
 ### Selecting a Course
 By default, the game starts on *Bunny Hill*, but you can switch to a different course using the `course` URL query parameter.
