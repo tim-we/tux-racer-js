@@ -1,10 +1,10 @@
-# TuxRacer.JS
+# TuxRacer.js
 
 You can play Tux Racer directly in your browser here: [Play TuxRacer.JS](https://0x00eb.itch.io/tux-racer)
 
 ![TuxRacer.JS Screenshot](screenshot.webp)
 
-TuxRacer.JS is a port / rewrite of *Extreme Tux Racer*, which itself is based on the original *Tux Racer* game. This project allows you to enjoy Tux Racer directly in your web browser, supporting all major desktop and mobile browsers.
+TuxRacer.js is a port / rewrite of *Extreme Tux Racer*, which itself is based on the original *Tux Racer* game. This project allows you to enjoy Tux Racer directly in your web browser, supporting all major desktop and mobile browsers.
 
 **Note:** This project is in an early development stage and far from complete. However, some courses are already functional enough to provide a fun experience (at least for me!).
 
@@ -18,7 +18,7 @@ TuxRacer.JS is a port / rewrite of *Extreme Tux Racer*, which itself is based on
 ### Steps
 1. Clone or download the repository:
    ```sh
-   git clone https://gitlab.com/your-repo/tuxracer-js.git
+   git clonehttps://github.com/ebbejan/tux-racer-js.git
    cd tuxracer-js
    ```
 2. Install dependencies:
@@ -134,11 +134,11 @@ Contributions are welcome! Feel free to submit issues, feature requests, or pull
 - Kristian Picon
 - Daniel Poeira
 
-### TuxRacer.JS Development
+### TuxRacer.js Development
 - Developed by Jan Ebbe
 
 ---
 
 ## License
-TuxRacer.JS is licensed under the **GNU General Public License v2.0**. For the complete license text, see the file [`LICENSE`](LICENSE).
+TuxRacer.js is licensed under the **GNU General Public License v2.0**. For the complete license text, see the file [`LICENSE`](LICENSE).
 
