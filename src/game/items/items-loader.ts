@@ -19,7 +19,7 @@ export namespace ItemsLoader {
 
   export async function load(): Promise<Items> {
     const response = await fetch(
-      `assets/course/${GameContext.courseConfig.folder}/items.json`,
+      `assets/course/${GameContext.courseConfig.key}/items.json`,
     );
     const itemsDto = (await response.json()) as ItemsDto;
 

@@ -2,6 +2,7 @@ import { Color } from "../../util/color.ts";
 import { Vector3 } from "../../math/vectors.ts";
 
 export type Environment = {
+  key: string;
   fog: Fog;
   lights: Light[];
   particleColor: Color;
@@ -23,6 +24,7 @@ export type Fog = {
 
 export namespace Environments {
   export const SUNNY: Environment = {
+    key: "sunny",
     fog: {
       start: 40,
       end: 75,
@@ -47,6 +49,7 @@ export namespace Environments {
   };
 
   export const NIGHT: Environment = {
+    key: "night",
     fog: {
       start: 0.0,
       end: 75.0,
@@ -65,6 +68,7 @@ export namespace Environments {
   };
 
   export const CLOUDY: Environment = {
+    key: "cloudy",
     fog: {
       start: -10.0,
       end: 80.0,
@@ -87,4 +91,10 @@ export namespace Environments {
     particleColor: [0.92, 0.88, 1.0, 1.0],
     skyboxTexture: "cloudy.webp",
   };
+
+  const ALL: Environment[] = [
+    SUNNY, CLOUDY, NIGHT
+  ];
+
+  export const BY_KEY: Map<string, Environment> = new Map(ALL.map(environment => [environment.key, environment]));
 }

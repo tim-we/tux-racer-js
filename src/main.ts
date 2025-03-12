@@ -94,84 +94,19 @@ function resizeCanvas(): void {
 function getCourseConfigFromUrl(): CourseConfig {
   const urlParams = new URLSearchParams(window.location.search);
   const course = urlParams.get("course");
-  switch (course) {
-    case "frozen-river":
-      return CourseConfigs.FROZEN_RIVER;
-
-    case "challenge-one":
-      return CourseConfigs.CHALLENGE_ONE;
-
-    case "chinese-wall":
-      return CourseConfigs.CHINESE_WALL;
-
-    case "downhill-fear":
-      return CourseConfigs.DOWNHILL_FEAR;
-
-    case "explore-mountains":
-      return CourseConfigs.EXPLORE_MOUNTAINS;
-
-    case "frozen-lakes":
-      return CourseConfigs.FROZEN_LAKES;
-
-    case "hippo-run":
-      return CourseConfigs.HIPPO_RUN;
-
-    case "holy-grail":
-      return CourseConfigs.HOLY_GRAIL;
-
-    case "in-search-of-vodka":
-      return CourseConfigs.IN_SEARCH_OF_VODKA;
-
-    case "milos-castle":
-      return CourseConfigs.MILOS_CASTLE;
-
-    case "path-of-daggers":
-      return CourseConfigs.PATH_OF_DAGGERS;
-
-    case "penguins-cant-fly":
-      return CourseConfigs.PENGUINS_CANT_FLY;
-
-    case "quiet-river":
-      return CourseConfigs.QUIET_RIVER;
-
-    case "secret-valleys":
-      return CourseConfigs.SECRET_VALLEYS;
-
-    case "this-means-something":
-      return CourseConfigs.THIS_MEANS_SOMETHING;
-
-    case "tux-at-home":
-      return CourseConfigs.TUX_AT_HOME;
-
-    case "twisty-slope":
-      return CourseConfigs.TWISTY_SLOPE;
-
-    case "wild-mountains":
-      return CourseConfigs.WILD_MOUNTAINS;
-
-    case "bumpy-ride":
-      return CourseConfigs.BUMPY_RIDE;
-
-    case "bunny-hill":
-    default:
-      return CourseConfigs.BUNNY_HILL;
+  if (!course || !CourseConfigs.BY_KEY.has(course)) {
+    return CourseConfigs.BUNNY_HILL;
   }
+  return CourseConfigs.BY_KEY.get(course) as CourseConfig;
 }
 
 function getEnvironmentFromUrl(): Environment {
   const urlParams = new URLSearchParams(window.location.search);
   const environment = urlParams.get("environment");
-  switch (environment) {
-    case "night":
-      return Environments.NIGHT;
-
-    case "cloudy":
-      return Environments.CLOUDY;
-
-    case "sunny":
-    default:
-      return Environments.SUNNY;
+  if (!environment || !Environments.BY_KEY.has(environment)) {
+    return Environments.SUNNY;
   }
+  return Environments.BY_KEY.get(environment) as Environment
 }
 
 function hideLoadingScreen(): void {
@@ -183,17 +118,23 @@ function hideLoadingScreen(): void {
   setTimeout(() => loadingScreenElement.classList.add("hidden"), 300);
 }
 
-function onGameTerminated(): void {
+function onGameTerminated(aborted = false): void {
   const hasMenu = new URLSearchParams(window.location.search).has("menu");
   if (hasMenu) {
-    setTimeout(() => (window.location.href = "../index.html#/practise"), 500);
+    let queryParameter = "";
+    if (!aborted) {
+      const result = btoa(JSON.stringify({ course: GameContext.courseConfig.key, time: (GameContext.endTime ?? 0) - (GameContext.startTime ?? 0) }));
+      queryParameter = "?result=" + encodeURIComponent(result);
+    }
+
+    setTimeout(() => (window.location.href = `../index.html${queryParameter}#/practise`), 500);
   }
 }
 
 document.addEventListener("keydown", (event) => {
   const key = event.key.toLowerCase();
   if (key === "escape") {
-    onGameTerminated();
+    onGameTerminated(true);
   } else if (key === "r") {
     window.location.reload();
   }

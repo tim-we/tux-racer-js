@@ -11,11 +11,11 @@ export namespace CourseLoader {
 
   export async function load(): Promise<Course> {
     const elevationMap = await Bitmap.loadFromFile(
-      `assets/course/${GameContext.courseConfig.folder}/elevation.png`,
+      `assets/course/${GameContext.courseConfig.key}/elevation.png`,
       true,
     );
     const terrainMap = await Bitmap.loadFromFile(
-      `assets/course/${GameContext.courseConfig.folder}/terrain.png`,
+      `assets/course/${GameContext.courseConfig.key}/terrain.png`,
     );
 
     const numX = elevationMap.width;

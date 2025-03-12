@@ -1,5 +1,5 @@
 export type CourseConfig = {
-  folder: string;
+  key: string;
   width: number;
   length: number;
   playWidth: number;
@@ -15,7 +15,7 @@ export type CourseConfig = {
 
 export namespace CourseConfigs {
   export const BUNNY_HILL: CourseConfig = {
-    folder: "bunny-hill",
+    key: "bunny-hill",
     width: 90.0,
     length: 520.0,
     playWidth: 85.0,
@@ -30,7 +30,7 @@ export namespace CourseConfigs {
   };
 
   export const FROZEN_RIVER: CourseConfig = {
-    folder: "frozen-river",
+    key: "frozen-river",
     width: 100.0,
     length: 800.0,
     playWidth: 60.0,
@@ -45,7 +45,7 @@ export namespace CourseConfigs {
   };
 
   export const CHALLENGE_ONE: CourseConfig = {
-    folder: "challenge-one",
+    key: "challenge-one",
     width: 100.0,
     length: 1500.0,
     playWidth: 95.0,
@@ -60,7 +60,7 @@ export namespace CourseConfigs {
   };
 
   export const CHINESE_WALL: CourseConfig = {
-    folder: "chinese-wall",
+    key: "chinese-wall",
     width: 100.0,
     length: 1500.0,
     playWidth: 95.0,
@@ -75,7 +75,7 @@ export namespace CourseConfigs {
   };
 
   export const DOWNHILL_FEAR: CourseConfig = {
-    folder: "downhill-fear",
+    key: "downhill-fear",
     width: 60.0,
     length: 1800.0,
     playWidth: 60.0,
@@ -90,7 +90,7 @@ export namespace CourseConfigs {
   };
 
   export const EXPLORE_MOUNTAINS: CourseConfig = {
-    folder: "explore-mountains",
+    key: "explore-mountains",
     width: 100.0,
     length: 2000.0,
     playWidth: 95.0,
@@ -105,7 +105,7 @@ export namespace CourseConfigs {
   };
 
   export const FROZEN_LAKES: CourseConfig = {
-    folder: "frozen-lakes",
+    key: "frozen-lakes",
     width: 100.0,
     length: 2000.0,
     playWidth: 95.0,
@@ -120,7 +120,7 @@ export namespace CourseConfigs {
   };
 
   export const HIPPO_RUN: CourseConfig = {
-    folder: "hippo-run",
+    key: "hippo-run",
     width: 30.0,
     length: 3500.0,
     playWidth: 30.0,
@@ -135,7 +135,7 @@ export namespace CourseConfigs {
   };
 
   export const HOLY_GRAIL: CourseConfig = {
-    folder: "holy-grail",
+    key: "holy-grail",
     width: 100.0,
     length: 1500.0,
     playWidth: 95.0,
@@ -150,7 +150,7 @@ export namespace CourseConfigs {
   };
 
   export const IN_SEARCH_OF_VODKA: CourseConfig = {
-    folder: "in-search-of-vodka",
+    key: "in-search-of-vodka",
     width: 60.0,
     length: 2500.0,
     playWidth: 60.0,
@@ -165,7 +165,7 @@ export namespace CourseConfigs {
   };
 
   export const MILOS_CASTLE: CourseConfig = {
-    folder: "milos-castle",
+    key: "milos-castle",
     width: 54.0,
     length: 800.0,
     playWidth: 54.0,
@@ -180,7 +180,7 @@ export namespace CourseConfigs {
   };
 
   export const PATH_OF_DAGGERS: CourseConfig = {
-    folder: "path-of-daggers",
+    key: "path-of-daggers",
     width: 54.0,
     length: 800.0,
     playWidth: 48.0,
@@ -195,7 +195,7 @@ export namespace CourseConfigs {
   };
 
   export const PENGUINS_CANT_FLY: CourseConfig = {
-    folder: "penguins-cant-fly",
+    key: "penguins-cant-fly",
     width: 60.0,
     length: 2500.0,
     playWidth: 60.0,
@@ -210,7 +210,7 @@ export namespace CourseConfigs {
   };
 
   export const QUIET_RIVER: CourseConfig = {
-    folder: "quiet-river",
+    key: "quiet-river",
     width: 50.0,
     length: 2000.0,
     playWidth: 49.0,
@@ -225,7 +225,7 @@ export namespace CourseConfigs {
   };
 
   export const SECRET_VALLEYS: CourseConfig = {
-    folder: "secret-valleys",
+    key: "secret-valleys",
     width: 100.0,
     length: 2000.0,
     playWidth: 95.0,
@@ -240,7 +240,7 @@ export namespace CourseConfigs {
   };
 
   export const THIS_MEANS_SOMETHING: CourseConfig = {
-    folder: "this-means-something",
+    key: "this-means-something",
     width: 54.0,
     length: 800.0,
     playWidth: 52.0,
@@ -255,7 +255,7 @@ export namespace CourseConfigs {
   };
 
   export const TUX_AT_HOME: CourseConfig = {
-    folder: "tux-at-home",
+    key: "tux-at-home",
     width: 100.0,
     length: 2000.0,
     playWidth: 95.0,
@@ -270,7 +270,7 @@ export namespace CourseConfigs {
   };
 
   export const TWISTY_SLOPE: CourseConfig = {
-    folder: "twisty-slope",
+    key: "twisty-slope",
     width: 90.0,
     length: 520.0,
     playWidth: 55.0,
@@ -285,7 +285,7 @@ export namespace CourseConfigs {
   };
 
   export const WILD_MOUNTAINS: CourseConfig = {
-    folder: "wild-mountains",
+    key: "wild-mountains",
     width: 100.0,
     length: 2000.0,
     playWidth: 95.0,
@@ -300,7 +300,7 @@ export namespace CourseConfigs {
   };
 
   export const BUMPY_RIDE: CourseConfig = {
-    folder: "bumpy-ride",
+    key: "bumpy-ride",
     width: 60.0,
     length: 604.0,
     playWidth: 30.0,
@@ -313,4 +313,10 @@ export namespace CourseConfigs {
     showOutro: true,
     fogHeight: 0.25,
   };
+
+  const ALL: CourseConfig[] = [
+    BUNNY_HILL, BUMPY_RIDE, DOWNHILL_FEAR, QUIET_RIVER, TWISTY_SLOPE, THIS_MEANS_SOMETHING, FROZEN_RIVER, IN_SEARCH_OF_VODKA, FROZEN_LAKES, HIPPO_RUN, PENGUINS_CANT_FLY, SECRET_VALLEYS, MILOS_CASTLE, HOLY_GRAIL, EXPLORE_MOUNTAINS, TUX_AT_HOME, WILD_MOUNTAINS, CHINESE_WALL, CHALLENGE_ONE, PATH_OF_DAGGERS
+  ];
+
+  export const BY_KEY: Map<string, CourseConfig> = new Map(ALL.map(course => [course.key, course]));
 }
