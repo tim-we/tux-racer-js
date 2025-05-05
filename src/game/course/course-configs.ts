@@ -205,7 +205,7 @@ export namespace CourseConfigs {
     angle: 30.0,
     scale: 10.0,
     finishBrake: 25.0,
-    showOutro: true,
+    showOutro: false,
     fogHeight: 0.25,
   };
 
@@ -314,7 +314,7 @@ export namespace CourseConfigs {
     fogHeight: 0.25,
   };
 
-  const ALL: CourseConfig[] = [
+  export const ALL: CourseConfig[] = [
     BUNNY_HILL, BUMPY_RIDE, DOWNHILL_FEAR, QUIET_RIVER, TWISTY_SLOPE, THIS_MEANS_SOMETHING, FROZEN_RIVER, IN_SEARCH_OF_VODKA, FROZEN_LAKES, HIPPO_RUN, PENGUINS_CANT_FLY, SECRET_VALLEYS, MILOS_CASTLE, HOLY_GRAIL, EXPLORE_MOUNTAINS, TUX_AT_HOME, WILD_MOUNTAINS, CHINESE_WALL, CHALLENGE_ONE, PATH_OF_DAGGERS
   ];
 

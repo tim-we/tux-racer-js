@@ -92,7 +92,7 @@ export namespace Environments {
     skyboxTexture: "cloudy.webp",
   };
 
-  const ALL: Environment[] = [
+  export const ALL: Environment[] = [
     SUNNY, CLOUDY, NIGHT
   ];
 

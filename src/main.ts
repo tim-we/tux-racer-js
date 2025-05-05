@@ -123,11 +123,20 @@ function onGameTerminated(aborted = false): void {
   if (hasMenu) {
     let queryParameter = "";
     if (!aborted) {
-      const result = btoa(JSON.stringify({ course: GameContext.courseConfig.key, time: (GameContext.endTime ?? 0) - (GameContext.startTime ?? 0) }));
+      const time = (GameContext.endTime ?? 0) - (GameContext.startTime ?? 0);
+      const result = btoa(JSON.stringify({ course: GameContext.courseConfig.key, time }));
       queryParameter = "?result=" + encodeURIComponent(result);
     }
 
     setTimeout(() => (window.location.href = `../index.html${queryParameter}#/practise`), 500);
+  } else {
+    const courseIndex = Math.floor(CourseConfigs.ALL.length * Math.random());
+    const courseKey = CourseConfigs.ALL[courseIndex].key;
+
+    const environmentIndex = Math.floor(Environments.ALL.length * Math.random());
+    const environmentKey = Environments.ALL[environmentIndex].key;
+
+    setTimeout(() => (window.location.href = `./index.html?course=${courseKey}&environment=${environmentKey}`), 500);
   }
 }
 
