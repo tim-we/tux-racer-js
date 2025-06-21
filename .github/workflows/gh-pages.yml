@@ -1,0 +1,41 @@
+name: GitHub Pages Deployment
+
+on:
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions: {} # disable all
+
+jobs:
+  build:
+    name: Build+Deploy
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # for peaceiris/actions-gh-pages
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: package.json
+          cache: npm
+          cache-dependency-path: package-lock.json
+      
+      - name: NPM install
+        run: npm ci
+        
+      - name: Build
+        run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4.0.0 # TODO: consider using the official GitHub Pages Action when out of beta
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          keep_files: true
