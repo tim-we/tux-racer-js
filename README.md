@@ -18,7 +18,7 @@ TuxRacer.js is a port / rewrite of *Extreme Tux Racer*, which itself is based on
 ### Steps
 1. Clone or download the repository:
    ```sh
-   git clonehttps://github.com/ebbejan/tux-racer-js.git
+   git clone https://github.com/ebbejan/tux-racer-js.git
    cd tuxracer-js
    ```
 2. Install dependencies:
